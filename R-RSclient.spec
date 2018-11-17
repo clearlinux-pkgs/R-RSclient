@@ -4,14 +4,14 @@
 #
 Name     : R-RSclient
 Version  : 0.7.3
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/RSclient_0.7-3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RSclient_0.7-3.tar.gz
 Summary  : Client for Rserve
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-RSclient-lib
-BuildRequires : clr-R-helpers
+Requires: R-RSclient-lib = %{version}-%{release}
+BuildRequires : buildreq-R
 BuildRequires : openssl-dev
 
 %description
@@ -33,11 +33,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521270526
+export SOURCE_DATE_EPOCH=1542431053
 
 %install
+export SOURCE_DATE_EPOCH=1542431053
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521270526
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
