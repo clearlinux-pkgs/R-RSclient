@@ -4,7 +4,7 @@
 #
 Name     : R-RSclient
 Version  : 0.7.3
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/RSclient_0.7-3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RSclient_0.7-3.tar.gz
 Summary  : Client for Rserve
@@ -33,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542431053
+export SOURCE_DATE_EPOCH=1552786890
 
 %install
-export SOURCE_DATE_EPOCH=1542431053
+export SOURCE_DATE_EPOCH=1552786890
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library RSclient|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  RSclient || :
 
 
 %files
@@ -99,7 +98,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RSclient/help/paths.rds
 /usr/lib64/R/library/RSclient/html/00Index.html
 /usr/lib64/R/library/RSclient/html/R.css
-/usr/lib64/R/library/RSclient/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
