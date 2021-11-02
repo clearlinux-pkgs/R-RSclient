@@ -1,3 +1,37 @@
+0.7-6	2021-10-31
+   o	remove configure.win and rely on OpenSSL being part
+	of the toolchain
+
+0.7-5	2021-09-12
+   o	support long vectors when encoding (needed for R 3.5.0+)
+
+   o	retry SSL/TLS read and write operations when required (#5)
+
+   o	add `verify` flag to RS.connect() to verify the server
+	certificate when connecting using SSL. (#3)
+
+	Important: note that the default has now changed to
+	`verify=TRUE', such that the default is to check the server
+	certificate and fail in case it is not valid. To restore
+	the old bahavior use `verify=FALSE'.
+
+   o	add `ca` argument to RS.connect() and RS.switch() to
+	supply any CA chain needed to verify the server certificate.
+	Only useful in conjunction with `verify=TRUE`.
+
+   o	it is now possible to supply a client certificate using
+	`chain` (for client certificate and its chain) and `key`
+	(for the client key) in RS.connect() and RS.switch().
+	This allows client authentication in Rserve based on the
+	client certificate.
+
+   o	use NAMESPACE for C symbol registration
+
+
+0.7-4	2017-10-06
+   o	support RS.collect(..., qap=TRUE)
+
+
 0.7-3	2015-07-27
    o	fix an error when handling OOB if no handlers are registered
 
