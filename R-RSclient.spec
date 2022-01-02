@@ -4,7 +4,7 @@
 #
 Name     : R-RSclient
 Version  : 0.7.6
-Release  : 40
+Release  : 41
 URL      : https://cran.r-project.org/src/contrib/RSclient_0.7-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RSclient_0.7-6.tar.gz
 Summary  : Client for Rserve
@@ -34,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635812245
+export SOURCE_DATE_EPOCH=1641105851
 
 %install
-export SOURCE_DATE_EPOCH=1635812245
+export SOURCE_DATE_EPOCH=1641105851
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
