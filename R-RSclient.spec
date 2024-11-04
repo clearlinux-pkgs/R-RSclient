@@ -7,7 +7,7 @@
 #
 Name     : R-RSclient
 Version  : 0.7.10
-Release  : 55
+Release  : 56
 URL      : https://cran.r-project.org/src/contrib/RSclient_0.7-10.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RSclient_0.7-10.tar.gz
 Summary  : Client for Rserve
